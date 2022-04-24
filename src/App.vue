@@ -1,7 +1,13 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import {getUserInfo} from '@/api/user'
 console.log(111, import.meta.env)
+
+const params = {user: 'zhangsan'}
+getUserInfo(params)
+  .then(() => {})
+  .catch(() => {})
 </script>
 
 <template>
